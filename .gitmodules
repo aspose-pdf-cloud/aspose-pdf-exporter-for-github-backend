@@ -1,0 +1,4 @@
+[submodule "src/modules/application-services"]
+	path = src/modules/application-services
+	url = https://github.com/aspose-pdf-cloud/application-services.git
+	branch = master

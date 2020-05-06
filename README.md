@@ -2,7 +2,7 @@
 
 Aspose.PDF Exporter for Github is a free  application for [Github Marketplace](https://github.com/marketplace) that allow users to export their issues to pdf. Powered by [Aspose.PDF Cloud](https://products.aspose.cloud/pdf/family) and [Aspose.BarCode Cloud](https://products.aspose.cloud/barcode/family).
 **NOTE:**
-This project contains only backend functionality. Frontend is located in [another](https://github.com/aspose-pdf-cloud/aspose-pdf-exporter-for-github-frontend) project. To build bundle read [Bundle](#Bundle) section
+This project contains only backend functionality. Frontend is located in [another](https://github.com/aspose-pdf-cloud/aspose-pdf-exporter-for-github-frontend) project. To build bundle read [Bundle](#bundle) section
 
 ## Project structure
 * *src/AsposePdfExporterGitHub/AsposePdfExporterGitHub* - Aspose.PDF Exporter app's source code

@@ -6,6 +6,7 @@ using Aspose.Cloud.Marketplace.App.Github.Pdf.Exporter.Services;
 using Aspose.Cloud.Marketplace.Report;
 using Aspose.Cloud.Marketplace.Services.Model.Elasticsearch;
 using Aspose.Pdf.Cloud.Sdk.Api;
+using Aspose.BarCode.Cloud.Sdk.Interfaces;
 using Moq;
 using Octokit;
 

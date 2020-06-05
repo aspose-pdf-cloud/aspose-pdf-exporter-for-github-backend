@@ -10,7 +10,7 @@ namespace Aspose.Cloud.Marketplace.App.Github.Pdf.Exporter.Services
     public interface IAppGithubExporterCli : IAppCustomErrorReportingClient
     {
         IGitHubClient GitHubClient { get; }
-        IBarcodeApi BarcodeApi { get; }
+        Aspose.BarCode.Cloud.Sdk.Interfaces.IBarcodeApi BarcodeApi { get; }
         Aspose.Pdf.Cloud.Sdk.Api.IPdfApi PdfApi { get; }
     }
 }

@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Aspose.Pdf.Cloud.Sdk.Api;
 using Aspose.Pdf.Cloud.Sdk.Model;
+using Aspose.BarCode.Cloud.Sdk.Interfaces;
 using AutoFixture;
 
 namespace Aspose.Cloud.Marketplace.App.Github.Pdf.Exporter.Tests

@@ -23,7 +23,7 @@ namespace Aspose.Cloud.Marketplace.App.Github.Pdf.Exporter
             if (ex is Octokit.AuthorizationException) code = HttpStatusCode.Unauthorized;
             else if (ex is Octokit.ApiException oex) code = oex.StatusCode;
             else if (ex is Aspose.Pdf.Cloud.Sdk.Client.ApiException pex) code = (HttpStatusCode) pex.ErrorCode;
-            else if (ex is Aspose.BarCode.Cloud.Sdk.ApiException bex) code = (HttpStatusCode)bex.ErrorCode;
+            //else if (ex is Aspose.BarCode.Cloud.Sdk.Api.ApiException bex) code = (HttpStatusCode)bex.ErrorCode;
             return code;
         }
     }

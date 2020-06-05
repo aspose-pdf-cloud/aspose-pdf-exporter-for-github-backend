@@ -27,19 +27,6 @@ namespace Aspose.Cloud.Marketplace.App.Github.Pdf.Exporter.Services
     /// </summary>
     public class GithubExporterClientService : IAppGithubExporterCli
     {
-        public class BarcodeApiStub : IBarcodeApi
-        {
-            readonly Aspose.BarCode.Cloud.Sdk.BarCodeApi _instance;
-
-            public BarcodeApiStub(Aspose.BarCode.Cloud.Sdk.BarCodeApi instance)
-            {
-                _instance = instance;
-            }
-
-            public void BarCodePutBarCodeGenerateFile(BarCodePutBarCodeGenerateFileRequest request) =>
-                _instance.BarCodePutBarCodeGenerateFile(request);
-        }
-
         internal const string AsposeClientHeaderName = "x-aspose-client";
         internal const string AsposeClientVersionHeaderName = "x-aspose-client-version";
 
@@ -52,7 +39,7 @@ namespace Aspose.Cloud.Marketplace.App.Github.Pdf.Exporter.Services
         private readonly string _token;
         private Octokit.GitHubClient _githubClient;
         private Aspose.Pdf.Cloud.Sdk.Api.PdfApi _pdfApi;
-        private BarcodeApiStub _barcodeApiStub;
+        private Aspose.BarCode.Cloud.Sdk.Api.BarcodeApi _barcodeApi;
         private readonly Stopwatch stopwatch;
         private readonly Aspose.Pdf.Cloud.Sdk.Client.Configuration _pdfConfig;
         private readonly Aspose.BarCode.Cloud.Sdk.Configuration _barcodeConfig;
@@ -65,7 +52,7 @@ namespace Aspose.Cloud.Marketplace.App.Github.Pdf.Exporter.Services
             _token = token;
             _githubClient = null;
             _pdfApi = null;
-            _barcodeApiStub = null;
+            _barcodeApi = null;
 
             Stat = new List<StatisticalDocument>();
 
@@ -110,7 +97,7 @@ namespace Aspose.Cloud.Marketplace.App.Github.Pdf.Exporter.Services
         }
 
         public Aspose.Pdf.Cloud.Sdk.Api.IPdfApi PdfApi => _pdfApi ??= new Aspose.Pdf.Cloud.Sdk.Api.PdfApi(_pdfConfig);
-        public IBarcodeApi BarcodeApi => _barcodeApiStub ??= (_barcodeApiStub = new BarcodeApiStub(new Aspose.BarCode.Cloud.Sdk.BarCodeApi(_barcodeConfig)));
+        public Aspose.BarCode.Cloud.Sdk.Interfaces.IBarcodeApi BarcodeApi => _barcodeApi ??= new Aspose.BarCode.Cloud.Sdk.Api.BarcodeApi(_barcodeConfig);
 
         public ValueTuple<int, string, string, byte[]> ErrorResponseInfo(Exception ex)
         {

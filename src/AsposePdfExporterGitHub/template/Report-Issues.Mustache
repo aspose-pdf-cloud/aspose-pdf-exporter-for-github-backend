@@ -19,20 +19,6 @@ Content:
       Name: 'Arial'
       Size: 24
       Style: BoldItalic
-{{#issueQrImageVisible}}
-  - Url: {{issueQrImage}}
-    Location:
-      Left: -190
-      Top: 60
-      Right: -90
-      Bottom: 140
-{{/issueQrImageVisible}}
-#  - Url: https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
-#    Location:
-#      Left: -150
-#      Top: 300
-#      Right: -50
-#      Bottom: 500
   - Table: 1
     ColumnWidths: ['140', '140', '140', '140']
     Border:
@@ -72,11 +58,21 @@ Content:
               Color: white
           Margin:
             Bottom: 3
+{{#issueQrImageVisible}}
+        - Url: {{issueQrImage}}
+{{/issueQrImageVisible}}
+{{^issueQrImageVisible}}
         - Text: ''
+{{/issueQrImageVisible}}
           RowSpan: 4
           Border:
             All:
               Color: white
+          Margin:
+             Left: 15
+          #  Right: 5
+          #HorizontalAlignment: Center
+          #VerticalAlignment: Center
       - Cells:
         - Text: '{{summary}}'
           ColSpan: 2
